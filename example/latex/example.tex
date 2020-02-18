@@ -1,0 +1,48 @@
+% Load the main ipa class
+\documentclass[oneside]{modern}
+
+% Define the author
+\title{Modern LaTeX template}
+\author{Benj Fassbind}
+\date{\today}
+
+\begin{document}
+
+  % Print whole bibliographie
+  \nocite{*}
+
+  \firstpage
+    {Example Document}
+    {Benj Fassbind}
+    {Something}
+
+  \addtableofcontents
+
+  \newpage
+
+  % ------------------------------------------------------------------------------
+  % Assemble the document with the multiple parts
+
+  \subfile{0-typographic-elements.tex}
+
+  \subfile{1-part.tex}
+  \subfile{1.1-penguins.tex}
+
+  \chapter{Glossaries}
+
+  \addglossary
+
+  % Literaturverzeichnis
+  \newpage
+  \addcontentsline{toc}
+    {section}
+    {Literatur}
+
+  \printbibliography[
+    heading=subbibliography
+  ]
+
+  \newpage
+  \listoffigures
+
+\end{document}

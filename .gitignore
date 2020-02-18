@@ -1,0 +1,32 @@
+# Ignore generated pdf
+*.pdf
+
+# Generated history file
+dokument.version.tex
+
+# Ignore logfiles and generated files
+*.aux
+*.log
+*.pyg
+*.ptc*
+*.toc
+*.mtc*
+*.lof
+*.maf
+*.glo
+*.glsdefs
+*.ist
+*.xdy
+*.glg
+*.gls
+*.out
+*.acn
+*.acr
+*.alg
+*.bcf
+*.run.xml
+*-blx.bib
+*.bbl
+*.blg
+
+_minted-*

@@ -1,0 +1,39 @@
+\documentclass{modern}
+
+\providecommand{\tightlist}{
+  \setlength{\itemsep}{0pt}
+  \setlength{\parskip}{0pt}
+}
+
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
+
+\title{Some Title}
+\author{Benjamin Fassbind}
+\date{\today}
+
+$if(print-numbers)$
+$else$
+  \resetthesectinos
+$endif$
+
+\begin{document}
+
+\firstpage
+  {Test document}
+  {Benjamin Fassbind}
+  {Stuff}
+
+
+$if(title)$
+\maketitle
+$endif$
+
+$if(toc)$
+\tableofcontents
+$endif$
+
+$body$
+
+\end{document}
