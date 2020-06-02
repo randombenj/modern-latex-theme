@@ -1,4 +1,6 @@
 \documentclass{modern}
+\usepackage{float} % stops images from moving around
+\floatplacement{figure}{H}
 
 \providecommand{\tightlist}{
   \setlength{\itemsep}{0pt}
@@ -19,11 +21,6 @@ $else$
 $endif$
 
 \begin{document}
-
-\firstpage
-  {Test document}
-  {Benjamin Fassbind}
-  {Stuff}
 
 
 $if(title)$

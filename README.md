@@ -2,6 +2,9 @@
 
 An opinionated modern latex pdf theme for university notes/papers.
 
+Examples of the theme are built and published as releases.
+Have a look at the **[example builds](https://github.com/randombenj/modern-latex-theme/releases)**.
+
 ## Installation
 
 To install the template and all necessary fonts simply use `make install`
@@ -12,7 +15,7 @@ You need to set the `TEXINPUTS` environment variable to the location
 the `modern.cls` file is in:
 
 ```sh
-export TEXINPUTS="/path/to/modern-latex-template/:$TEXINPUTS"
+export TEXINPUTS="/path/to/modern-latex-theme/:$TEXINPUTS"
 ```
 
 You can use the template in your *LaTeX* document like this:

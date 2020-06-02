@@ -97,16 +97,10 @@
 % ----------
 % FONT SETUP
 \RequirePackage[T1]{fontenc}
-
 % set sans serif font to Gyre Adventor (https://tug.org/FontCatalogue/texgyreadventor/)
 \RequirePackage{tgadventor} % defines '\sfdefault'
 %  monofont Droid Sans Mono (https://tug.org/FontCatalogue/droidsansmono/)
 \RequirePackage[defaultmono]{droidmono} % defines '\ttdefault'
-% default serif font IBM Plex Serif Regular (https://tug.org/FontCatalogue/ibmplexserifregular/)
-\RequirePackage[
-  usefilenames, % Important for XeLaTeX
-  DefaultFeatures={Ligatures=Common}
-]{plex-otf}
 \RequirePackage{tgheros} % mainfont and '\rmdefault'
 
 % ------------------------------------------------------------------------------
