@@ -1,6 +1,11 @@
 # **Modern** *LaTeX* pdf theme
 
-An opinionated modern latex pdf theme for university notes/papers.
+An opinionated modern latex pdf theme for university notes/papers:
+
+| Title page  | Typographic elements | Images |
+| :------------------: | :------------------: | :------------------: |
+| ![title](example/img/title-page.png) | ![typographics](example/img/typographics.png) | ![images](example/img/images.png) |
+
 
 Examples of the theme are built and published as releases.
 Have a look at the **[example builds](https://github.com/randombenj/modern-latex-theme/releases)**.
