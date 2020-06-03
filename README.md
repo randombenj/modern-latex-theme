@@ -1,5 +1,7 @@
 # **Modern** *LaTeX* pdf theme
 
+[![build](https://github.com/randombenj/modern-latex-theme/workflows/CI/badge.svg)](https://github.com/randombenj/modern-latex-theme/actions)
+
 An opinionated modern latex pdf theme for university notes/papers:
 
 | Title page  | Typographic elements | Images |
