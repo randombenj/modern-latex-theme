@@ -1,0 +1,67 @@
+
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    container:
+        image: blang/latex
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: build example document
+        run: |
+          echo "::set-env name=version::$(git describe)"
+          apt update && apt install --yes texlive-fonts-extra wget
+          wget https://github.com/jgm/pandoc/releases/download/2.9.2.1/pandoc-2.9.2.1-1-amd64.deb
+          dpkg -i *.deb
+          export TEXINPUTS="$(pwd)/:$TEXINPUTS"
+
+          # build latex document
+          cd example/latex
+          lualatex -interaction=nonstopmode -halt-on-error -shell-escape example.tex
+          makeglossaries example
+          lualatex -interaction=nonstopmode -halt-on-error -shell-escape example.tex
+
+          # build pandoc document
+          cd ../markdown
+          pandoc \
+            --template=../../latex.template \
+            --pdf-engine=lualatex \
+            --pdf-engine-opt="-shell-escape" \
+            -o example.pdf document.md
+
+
+      - name: create release
+        id: create_release
+        uses: actions/create-release@v1.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ env.version }}
+          release_name: ${{ env.version }}
+          draft: false
+          prerelease: true
+
+      - name: upload handout
+        uses: actions/upload-release-asset@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: example/latex/example.pdf
+          asset_name: latex-example.pdf
+          asset_content_type: application/pdf
+
+      - name: upload markdown doc
+        uses: actions/upload-release-asset@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: example/markdown/example.pdf
+          asset_name: markdown-example.pdf
+          asset_content_type: application/pdf

@@ -1,6 +1,14 @@
 # **Modern** *LaTeX* pdf theme
 
-An opinionated modern latex pdf theme for university notes/papers.
+An opinionated modern latex pdf theme for university notes/papers:
+
+| Title page  | Typographic elements | Images |
+| :------------------: | :------------------: | :------------------: |
+| ![title](example/img/title-page.png) | ![typographics](example/img/typographics.png) | ![images](example/img/images.png) |
+
+
+Examples of the theme are built and published as releases.
+Have a look at the **[example builds](https://github.com/randombenj/modern-latex-theme/releases)**.
 
 ## Installation
 
@@ -12,7 +20,7 @@ You need to set the `TEXINPUTS` environment variable to the location
 the `modern.cls` file is in:
 
 ```sh
-export TEXINPUTS="/path/to/modern-latex-template/:$TEXINPUTS"
+export TEXINPUTS="/path/to/modern-latex-theme/:$TEXINPUTS"
 ```
 
 You can use the template in your *LaTeX* document like this:
