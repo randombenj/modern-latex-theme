@@ -12,9 +12,7 @@ An opinionated modern latex pdf theme for university notes/papers:
 Examples of the theme are built and published as releases.
 Have a look at the **[example builds](https://github.com/randombenj/modern-latex-theme/releases)**.
 
-## Usage
-
-### Installation
+## Installation
 
 You can simply install the latex theme like this:
 
@@ -50,7 +48,7 @@ mkdir -p ~/.pandoc/templates
 cp modern-latex-theme/latex.template ~/.pandoc/templates
 ```
 
-### Use from Source
+## Use from Source
 
 If you don't want to install the theme you need to set the `TEXINPUTS` environment variable to the location
 the `modern.cls` file is in:
@@ -60,7 +58,9 @@ git clone git@github.com:randombenj/modern-latex-theme.git
 export TEXINPUTS="$(pwd)/modern-latex-theme/:$TEXINPUTS"
 ```
 
-You can use the template in your *LaTeX* document like this:
+## Write docs
+
+You can use the template in your *LaTeX* document and build like this:
 
 ```tex
 \documentclass{modern}
@@ -73,7 +73,12 @@ You can use the template in your *LaTeX* document like this:
 
 ```
 
-To generate a pdf with pandoc simply run the following command:
+```sh
+lualatex -interaction=nonstopmode -halt-on-error -shell-escape [FILE.tex]
+```
+
+To generate a pdf with pandoc, for example from a markdown
+file simply run the following command:
 
 ```sh
 pandoc \
