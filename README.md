@@ -10,17 +10,34 @@ An opinionated modern latex pdf theme for university notes/papers:
 Examples of the theme are built and published as releases.
 Have a look at the **[example builds](https://github.com/randombenj/modern-latex-theme/releases)**.
 
-## Installation
-
-To install the template and all necessary fonts simply use `make install`
-
 ## Usage
 
-You need to set the `TEXINPUTS` environment variable to the location
+### Installation
+
+You can simply install the latex theme like this:
+
+```sh
+git clone git@github.com:randombenj/modern-latex-theme.git
+# install the template
+sudo cp modern-latex-theme/modern.cls /usr/local/share/texmf/tex/latex/
+mktexlsr
+```
+
+If you want to use this theme with pandoc install it like this:
+
+```sh
+mkdir -p ~/.pandoc/templates
+cp modern-latex-theme/latex.template ~/.pandoc/templates
+```
+
+### Use from Source
+
+If you don't want to install the theme you need to set the `TEXINPUTS` environment variable to the location
 the `modern.cls` file is in:
 
 ```sh
-export TEXINPUTS="/path/to/modern-latex-theme/:$TEXINPUTS"
+git clone git@github.com:randombenj/modern-latex-theme.git
+export TEXINPUTS="$(pwd)/modern-latex-theme/:$TEXINPUTS"
 ```
 
 You can use the template in your *LaTeX* document like this:
