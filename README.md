@@ -17,8 +17,26 @@ Have a look at the **[example builds](https://github.com/randombenj/modern-latex
 You can simply install the latex theme like this:
 
 ```sh
-git clone git@github.com:randombenj/modern-latex-theme.git
+# install required dependencies
+sudo apt install --yes texlive-base \
+  texlive-bibtex-extra \
+  texlive-binaries \
+  texlive-extra-utils \
+  texlive-font-utils \
+  texlive-fonts-recommended \
+  texlive-formats-extra \
+  texlive-lang-english \
+  texlive-lang-european \
+  texlive-lang-german \
+  texlive-latex-base \
+  texlive-latex-extra \
+  texlive-latex-recommended \
+  texlive-luatex \
+  texlive-pictures \
+  texlive-generic-extra
+
 # install the template
+git clone git@github.com:randombenj/modern-latex-theme.git
 sudo cp modern-latex-theme/modern.cls /usr/local/share/texmf/tex/latex/
 mktexlsr
 ```
