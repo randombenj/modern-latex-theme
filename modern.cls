@@ -12,7 +12,7 @@
 
 \LoadClass[
   a4paper,
-  11pt,
+  12pt,
   fleqn,
   oneside,
   openany
@@ -97,11 +97,17 @@
 % ----------
 % FONT SETUP
 \RequirePackage[T1]{fontenc}
+% set main font to Source Serif Pro (https://www.tug.org/FontCatalogue/sourceserifproregular/)
+\RequirePackage[default,light,black]{sourceserifpro}
 % set sans serif font to Gyre Adventor (https://tug.org/FontCatalogue/texgyreadventor/)
 \RequirePackage{tgadventor} % defines '\sfdefault'
 %  monofont Droid Sans Mono (https://tug.org/FontCatalogue/droidsansmono/)
 \RequirePackage[defaultmono]{droidmono} % defines '\ttdefault'
 \RequirePackage{tgheros} % mainfont and '\rmdefault'
+
+\setmainfont{SourceSerifPro} % sets the roman font
+\setsansfont{TEX Gyre Adventor} % sets the sans font
+\setmonofont{Droid Sans Mono} % sets the monospace font
 
 % ------------------------------------------------------------------------------
 % DOCUMENT PAGE SIZE
@@ -463,7 +469,7 @@
     \Huge\sf\bfseries
   }
   [
-    \huge\sf\bfseries\doctitle
+    \huge\sf\doctitle
     \vfill\clearpage
   ]      % After the titleformat
 
