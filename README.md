@@ -33,7 +33,10 @@ sudo apt install --yes texlive-base \
   texlive-latex-recommended \
   texlive-luatex \
   texlive-pictures \
-  texlive-generic-extra
+  texlive-generic-extra \
+  texlive-fonts-extra \
+  python-pygments
+  
 
 # install the template
 git clone git@github.com:randombenj/modern-latex-theme.git
@@ -57,6 +60,10 @@ the `modern.cls` file is in:
 git clone git@github.com:randombenj/modern-latex-theme.git
 export TEXINPUTS="$(pwd)/modern-latex-theme/:$TEXINPUTS"
 ```
+
+## Use with selfhosted [overleaf](https://github.com/overleaf/overleaf)
+
+Have a look here: https://github.com/randombenj/modern-latex-theme-overleaf
 
 ## Write docs
 
