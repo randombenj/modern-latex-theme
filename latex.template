@@ -7,13 +7,24 @@
   \setlength{\parskip}{0pt}
 }
 
+\def\toprule{}
+\def\bottomrule{}
+\def\midrule{}
+
 $if(highlighting-macros)$
 $highlighting-macros$
 $endif$
 
-\title{Some Title}
-\author{Benjamin Fassbind}
+$if(title)$
+\title{$title$}
+$endif$
+$if(author)$
+\author{$author$}
+$endif$
 \date{\today}
+
+\title{asdf}
+\author{me}
 
 $if(print-numbers)$
 $else$
