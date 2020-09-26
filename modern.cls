@@ -102,12 +102,13 @@
 % set sans serif font to Gyre Adventor (https://tug.org/FontCatalogue/texgyreadventor/)
 \RequirePackage{tgadventor} % defines '\sfdefault'
 %  monofont Droid Sans Mono (https://tug.org/FontCatalogue/droidsansmono/)
-\RequirePackage[defaultmono]{droidmono} % defines '\ttdefault'
+\RequirePackage[ttdefault=true]{AnonymousPro}
+%\RequirePackage[defaultmono]{droidmono} % defines '\ttdefault'
 \RequirePackage{tgheros} % mainfont and '\rmdefault'
 
 \setmainfont{SourceSerifPro} % sets the roman font
 \setsansfont{TEX Gyre Adventor} % sets the sans font
-\setmonofont{Droid Sans Mono} % sets the monospace font
+\setmonofont{Anonymous Pro} % sets the monospace font
 
 % ------------------------------------------------------------------------------
 % DOCUMENT PAGE SIZE
