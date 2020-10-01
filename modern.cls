@@ -372,7 +372,7 @@
 
 \newcommand{\infoTile}[1]
 	{
-		\tile{green2-light}
+		\tile{light-gray}
 			{#1}
 	}
 
