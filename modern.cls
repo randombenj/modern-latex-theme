@@ -516,7 +516,7 @@
 % Title TOC format
 \titlecontents{section}
   [3mm]                     % left margin
-  {}                        % above code
+  {\vspace{1mm}}                        % above code
   {
     \thecontentslabel
     \hspace{2mm}
@@ -525,7 +525,7 @@
   {                         % filler-page-format, (nothing)
     \titlerule*[0mm]{}
     \contentspage
-  }[\vspace{0mm}]           % below code
+  }[\vspace{1mm}]           % below code
 
 
 \titleformat{\subsection}
@@ -546,7 +546,7 @@
   {                         % filler-page-format, (nothing)
     \titlerule*[0mm]{}
     \contentspage
-  }[\vspace{2mm}]           % below code
+  }[\vspace{1mm}]           % below code
 
 \titleformat{\subsubsection}
   {\sf\large}      % Font style
