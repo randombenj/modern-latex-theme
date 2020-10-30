@@ -166,7 +166,7 @@
   \addcontentsline{toc}
     {section}
     {\listfigurename}
-  \@starttoc{lof}
+  \@starttoc{lot}
 }
 \makeatother
 
